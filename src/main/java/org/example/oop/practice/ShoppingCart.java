@@ -15,4 +15,11 @@ public class ShoppingCart {
                 .mapToInt(Product::getPrice)
                 .sum();
     }
+
+    @Override
+    public String toString() {
+        return "ShoppingCart{" +
+                "products=" + products +
+                '}';
+    }
 }

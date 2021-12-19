@@ -12,4 +12,12 @@ public class Product {
     public int getPrice() {
         return this.price;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }
