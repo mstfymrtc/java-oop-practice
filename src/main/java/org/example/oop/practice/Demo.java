@@ -5,8 +5,6 @@ import java.util.Optional;
 public class Demo {
     public static void main(String[] args) {
         ShoppingCart shoppingCart = new ShoppingCart();
-        // Product snowWheel = new Product("Snow Wheel", 525);
-        // Product tshirt = new Product("Tshirt", 45);
 
         // To simulate the DB
         Product snowWheel = Catalogue.getProduct("Snow Wheel");
