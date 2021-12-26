@@ -14,7 +14,8 @@ public class LineItem {
     }
 
     public int getPrice() {
-        return product.getPrice() * quantity;
+        PriceCalculator priceCalculator = product.createPriceCalculator();
+        return priceCalculator.calculatePrice(quantity);
     }
 
     @Override
