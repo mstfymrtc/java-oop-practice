@@ -5,8 +5,8 @@ public class BusinessCustomer extends Customer {
 
     private BusinessSize size;
 
-    public BusinessCustomer(String name, long ccNumber, BusinessSize size) {
-        super(name, ccNumber);
+    public BusinessCustomer(String name, BusinessSize size) {
+        super(name);
         this.size = size;
     }
 

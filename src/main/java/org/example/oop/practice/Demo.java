@@ -14,11 +14,12 @@ public class Demo {
         shoppingCart.addLineItem(new LineItem(snowWheel, 1));
         shoppingCart.addLineItem(new LineItem(tshirt, 1));
         shoppingCart.addLineItem(new LineItem(warAndPeace, 3));
-        System.out.println(shoppingCart);
-        System.out.println(shoppingCart.getTotalCost());
 
-        Customer customer = new Customer("Mustafa Yumurtacı", 1234999944445555L);
-        Optional<Order> order = customer.checkout(shoppingCart);
+
+        Customer customer = new Customer("Mustafa Yumurtacı");
+        customer.addPaymentMethod("Mustafa's Credit Card", new CreditCard(1234999944445555L));
+        customer.addPaymentMethod("Mustafa's Bank Account", new BankAccount("12349999","435345346575"));
+        Optional<Order> order = customer.checkout(shoppingCart,"Mustafa's Credit Card");
         System.out.println(order);
     }
 }
